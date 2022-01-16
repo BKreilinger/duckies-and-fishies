@@ -18,10 +18,13 @@ RUN usermod -a -G staff duck
 USER duck
 WORKDIR /home/duck
 
-RUN pip3 install numpy
-RUN pip3 install pandas
 RUN pip3 install matplotlib
+RUN pip3 install numpy
+RUN pip3 install -U kaleido
+RUN pip3 install pandas
+RUN pip3 install plotly
 RUN pip3 install pylatex
+RUN pip3 install xlrd
 
 # If we use hdf5
 #RUN pip install h5py
