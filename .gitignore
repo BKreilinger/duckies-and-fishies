@@ -41,3 +41,7 @@ JsonSchema_To_Algebra/.idea/*
 *.project
 *.settings
 *.vscode
+
+*.swp
+*.aux
+*.pdf

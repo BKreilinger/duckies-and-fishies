@@ -11,7 +11,10 @@ RUN apt-get -y install \
 	python3 \
 	python3-pip \
 #	latexmk
-	texlive-latex-base
+	texlive-latex-base \
+	texlive-pictures \
+	texlive-science \
+	texlive-latex-extra
 
 RUN useradd -m -G sudo -s /bin/bash duck && echo "duck:duck" | chpasswd
 RUN usermod -a -G staff duck

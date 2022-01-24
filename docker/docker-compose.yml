@@ -7,4 +7,3 @@ services:
                 volumes:
                    - ../data:/home/duck/data
                    - ../scripts:/home/duck/scripts
-                   - ../data:/home/duck/images
