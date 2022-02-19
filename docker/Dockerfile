@@ -22,7 +22,6 @@ USER duck
 WORKDIR /home/duck
 
 RUN pip3 install -U kaleido
-RUN pip3 install numpy
 RUN pip3 install pandas
 RUN pip3 install plotly
 RUN pip3 install pulp

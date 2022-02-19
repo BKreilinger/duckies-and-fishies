@@ -16,7 +16,7 @@ y = LpVariable(name='fish', lowBound=0)
 
 model += (x <= 400, 'time_constraint_duck')
 model += (y <= 300, 'time_constraint_fish')
-model += (y <= 400 - 0.8 * x, 'rubber_pellet_contstraint')
+model += (y <= 400 - 0.8 * x, 'rubber_pellet_constraint')
 
 objective_func = 5*x + 4*y
 model += objective_func

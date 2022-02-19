@@ -7,13 +7,7 @@ csv_file_path = path + '/basedata/product_mix.csv'
 
 axis_range = 500   
 
-def save_graph(fig, path):
-    print('Saving Figure…')
-    fig.write_image(path)
-    print('Figure saved!')
-
-
-print('\tStart /home/duck/scripts/generate_product_mixes_graphs.py…')
+print('\tStart /home/duck/scripts/generate_product_mix_graph.py…')
 
 df = pd.read_csv(csv_file_path, index_col=0)
 
@@ -38,12 +32,6 @@ fig.update_xaxes(range=(0,axis_range), title_text='Fish')
 #constraints
 fig.add_vline(x=max_fish, line_dash='dash', line_color='black')
 fig.add_hline(y=max_ducks, line_dash='dash',line_color='black')
-
-#product mix 1 --> 100 ducks and 200 fish --> no data for the other example product mixes!
-fig.add_trace(go.Scatter(x=[product_mix1_fish], y=[product_mix1_ducks]))
-
-save_graph(fig, save_path + '/product_mixes.png')
-
 fig.add_shape(type='line',
     x0=0, y0=restriction_ducks, x1=restriction_fish, y1=0,
     line=dict(
@@ -51,6 +39,13 @@ fig.add_shape(type='line',
         dash='dash',
     )
 )
-save_graph(fig, save_path + '/product_mix_with_scope.png')
 
-print('\tFinished /home/duck/scripts/generate_product_mixes_graphs.py!')
+#product mix 1 --> 100 ducks and 200 fish --> no data for the other example product mixes!
+fig.add_trace(go.Scatter(x=[product_mix1_fish], y=[product_mix1_ducks]))
+
+print('Saving Figure…')
+
+fig.write_image(save_path + '/product_mix.png')
+
+print('Figure saved!')
+print('\tFinished /home/duck/scripts/generate_product_mix_graph.py!')

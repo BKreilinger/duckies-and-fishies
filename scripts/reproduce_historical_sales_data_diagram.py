@@ -1,6 +1,7 @@
 import pandas as pd
 import plotly.graph_objects as go
 
+print('\tStarting /home/duck/scripts/reproduce_historical_sales_data_diagram.py…')
 
 path = '/home/duck/data'
 csv_file_path = path + '/basedata/historical_sales_data_csv_format.csv'
@@ -47,4 +48,6 @@ fig.update_yaxes(title_text="Units sold")
 print('Saving Figure…')
 
 fig.write_image(image_path + '/hist_sales_graph.png')
+
 print('Figure saved!')
+print('\tFinished /home/duck/scripts/reproduce_historical_sales_data_diagram.py!')
