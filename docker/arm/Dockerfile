@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM --platform=linux/x86_64 ubuntu:20.04
 
 MAINTAINER Benjamin Kreilinger  <kreili11@ads.uni-passau.de>
 MAINTAINER Luca Escher <escher06@ads.uni-passau.de>
