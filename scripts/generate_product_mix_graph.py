@@ -24,8 +24,6 @@ print('Creating Product Mix Figure…')
 
 fig = go.Figure()
 
-fig.update_layout(title_text='Product Mixes', title_x=0.5)
-
 fig.update_yaxes(range=(0,axis_range), title_text='Ducks')
 fig.update_xaxes(range=(0,axis_range), title_text='Fish')
 
