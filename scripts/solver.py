@@ -35,7 +35,7 @@ for var in model.variables():
 
 print('Finished calculating optimal profit!')
 print('Creating csv document with results… (You can find the results in …/data/csv_result_documents)')
-row_list = [['production_quantity_ducks', 'production_quantity_fish', 'profit'],
+row_list = [['QuantityDucks', 'QuantityFish', 'Profit'],
              [result_duck, result_fish, profit]]
 with open(path + '/csv_result_documents/bathing_firends_res1.csv', 'w', newline='') as file:
     writer = csv.writer(file)
@@ -62,7 +62,7 @@ for var in model.variables():
 print('Finished calculating optimal profit!')
 print('Creating csv document with estimated demand constraints… (You can find the results in '
       '…/data/csv_result_documents)')
-row_list = [['production_quantity_ducks', 'production_quantity_fish', 'profit'],
+row_list = [['QuantityDucks', 'QuantityFish', 'Profit'],
              [result_duck, result_fish, profit]]
 with open(path + '/csv_result_documents/bathing_firends_res2_with_estimated_demands.csv', 'w', newline='') as file:
     writer = csv.writer(file)
