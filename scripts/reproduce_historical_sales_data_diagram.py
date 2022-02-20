@@ -1,12 +1,11 @@
-import os
 import pandas as pd
 import plotly.graph_objects as go
 
 print('\tStarting /home/duck/scripts/reproduce_historical_sales_data_diagram.py…')
 
 path = '/home/duck/data'
-csv_file_path = path + '/historical_sales_data_csv_format.csv'
-image_path = '/home/duck/images'
+csv_file_path = path + '/basedata/historical_sales_data_csv_format.csv'
+image_path = path + '/images'
 
 df = pd.read_csv(csv_file_path, index_col=0)
 print('Reading csv file…')

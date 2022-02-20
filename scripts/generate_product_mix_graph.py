@@ -2,10 +2,10 @@ import plotly.graph_objects as go
 import pandas as pd
 
 path = '/home/duck/data'
-save_path = path + '/images'
 csv_file_path = path + '/basedata/product_mix.csv'
+image_path = path + '/images'
 
-axis_range = 500   
+axis_range = 500
 
 print('\tStart /home/duck/scripts/generate_product_mix_graph.py…')
 
@@ -43,7 +43,7 @@ fig.add_trace(go.Scatter(x=[product_mix1_fish], y=[product_mix1_ducks]))
 
 print('Saving Figure…')
 
-fig.write_image(save_path + '/product_mix.png')
+fig.write_image(image_path + '/product_mix.png')
 
 print('Figure saved!')
 print('\tFinished /home/duck/scripts/generate_product_mix_graph.py!')

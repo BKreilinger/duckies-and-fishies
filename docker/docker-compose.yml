@@ -7,9 +7,6 @@ services:
                 volumes:
                    - ../data:/home/duck/data
                    - ../scripts:/home/duck/scripts
-                command: ./scripts/dispatcher/dispatcher.sh
-
-
 
         ubuntu-arm:
                 build: ./arm
@@ -18,4 +15,3 @@ services:
                 volumes:
                    - ../data:/home/duck/data
                    - ../scripts:/home/duck/scripts
-                command: ./scripts/dispatcher/dispatcher_arm.sh

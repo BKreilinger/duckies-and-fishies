@@ -38,7 +38,5 @@ docker-compose exec ubuntu "./scripts/dispatcher/dispatcher.sh"
 
 if [[ $is_arm == "true" ]]; then
   docker-compose up -d ubuntu-arm
-  docker-compose exec ubuntu "./scripts/dispatcher/dispatcher_arm.sh"
+  docker-compose exec ubuntu-arm "./scripts/dispatcher/dispatcher_arm.sh"
 fi
-
-docker-compose exec ubuntu bash
