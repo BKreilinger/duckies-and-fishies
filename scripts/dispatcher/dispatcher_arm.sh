@@ -1,6 +1,7 @@
 #!/bin/bash
 
-python3 ../
-# todo: execute solver
+python3 ./scripts/solver.py
+pdflatex -output-directory ./data/documentation ./data/basedata/final_paper.tex
 
-# todo generate latex file
+rm ./data/documentation/final_paper.log
+rm ./data/documentation/final_paper.aux

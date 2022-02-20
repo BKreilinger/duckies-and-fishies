@@ -1,13 +1,17 @@
 #!/bin/bash
 
-python3 ../generate_product_mixes_graphs.py
+echo "Starting execution"
 
-is_arm=$(uname -a)
+python3 ./scripts/generate_product_mix_graph.py
+python3 ./scripts/reproduce_historical_sales_data_diagram.py
 
-if [[ $is_arm =~ .*x86_64.*  ]]; then
-	python3 ../
-	# todo: execute solver
+architecture=$(uname -a)
 
-	# todo generate latex file
+if [[ $architecture =~ .*x86_64.*  ]]; then
+	python3 ./scripts/solver.py
+	pdflatex -output-directory ./data/documentation ./data/basedata/final_paper.tex
+
+	rm ./data/documentation/final_paper.log
+	rm ./data/documentation/final_paper.aux
 fi
 
