@@ -1,0 +1,8 @@
+cff-version: 1.1.0
+message: "If you use this software, please cite it as below."
+authors:
+  - Luca Escher
+  - Benjamin Kreilinger
+title: BKreilinger/duckies-and-fishies: Release 1.0
+version: v1.0
+date-released: 2022-02-20
