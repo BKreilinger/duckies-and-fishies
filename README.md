@@ -5,6 +5,8 @@ This project aims to reproduce the process of the "duckies and fishies project" 
 
 This project was created within the scope of the lecture "Reproducibility Engineering" at the University of Passau and the University of Regensburg.
 
+[![DOI](https://zenodo.org/badge/446453835.svg)](https://zenodo.org/badge/latestdoi/446453835)
+
 ## Content
 
 * [Project setup](#project-setup)
@@ -20,9 +22,11 @@ This project was created within the scope of the lecture "Reproducibility Engine
 
 2. Clone the project
 
-    `git clone https://github.com/BKreilinger/duckies-and-fishies.git`
-
-   `zenodo link`
+    Git:
+        `git clone https://github.com/BKreilinger/duckies-and-fishies.git`
+   
+    Zenodo:
+        `https://doi.org/10.5281/zenodo.6190165`
 
 3. Execute start script
 
