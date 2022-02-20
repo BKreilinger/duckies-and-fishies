@@ -1,6 +1,6 @@
-FROM --platform=linux/x86_64 ubuntu:20.04
+FROM ubuntu:20.04
 
-MAINTAINER Benjamin Kreilinger  <kreili11@ads.uni-passau.de>
+MAINTAINER Benjamin Kreilinger <kreili11@ads.uni-passau.de>
 MAINTAINER Luca Escher <escher06@ads.uni-passau.de>
 
 RUN apt-get update -qq 
@@ -21,8 +21,7 @@ RUN usermod -a -G staff duck
 USER duck
 WORKDIR /home/duck
 
-RUN pip3 install matplotlib
-RUN pip3 install numpy
 RUN pip3 install -U kaleido
 RUN pip3 install pandas
 RUN pip3 install plotly
+RUN pip3 install pulp

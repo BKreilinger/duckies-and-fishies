@@ -16,7 +16,7 @@ y = LpVariable(name='fish', lowBound=0)
 
 model += (x <= 400, 'time_constraint_duck')
 model += (y <= 300, 'time_constraint_fish')
-model += (y <= 400 - 0.8 * x, 'rubber_pellet_contstraint')
+model += (y <= 400 - 0.8 * x, 'rubber_pellet_constraint')
 
 objective_func = 5*x + 4*y
 model += objective_func
@@ -35,7 +35,7 @@ for var in model.variables():
 
 print('Finished calculating optimal profit!')
 print('Creating csv document with results… (You can find the results in …/data/csv_result_documents)')
-row_list = [['production_quantity_ducks', 'production_quantity_fish', 'profit'],
+row_list = [['QuantityDucks', 'QuantityFish', 'Profit'],
              [result_duck, result_fish, profit]]
 with open(path + '/csv_result_documents/bathing_firends_res1.csv', 'w', newline='') as file:
     writer = csv.writer(file)
@@ -62,7 +62,7 @@ for var in model.variables():
 print('Finished calculating optimal profit!')
 print('Creating csv document with estimated demand constraints… (You can find the results in '
       '…/data/csv_result_documents)')
-row_list = [['production_quantity_ducks', 'production_quantity_fish', 'profit'],
+row_list = [['QuantityDucks', 'QuantityFish', 'Profit'],
              [result_duck, result_fish, profit]]
 with open(path + '/csv_result_documents/bathing_firends_res2_with_estimated_demands.csv', 'w', newline='') as file:
     writer = csv.writer(file)
